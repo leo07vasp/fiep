@@ -1,131 +1,119 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <h1>Calculadora online</h1>
 
-    <div class="container pb-calc-container">
+    <div class="container calc-online">
       <div class="row">
-        <div class="col-md-3 col-md-offset-5">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <label>Simple Calculator</label>
-            </div>
-            <div class="panel-body pb-calc-panel-body">
-              <input type="text" class="form-control" placeholder="2 + 2 = 4" />
+        <div class="col-5 history">
+          <h6>Historico</h6>
+          <ul class="history-box">
+            <li>
+              4+5 = 2
+              <a href="#remove">
+                <i class="fas fa-trash"></i>
+              </a>
+            </li>
+             <li>
+              4+5 = 2
+              <a href="#remove">
+                <i class="fas fa-trash"></i>
+              </a>
+            </li>
+             <li>
+              4+5 = 2
+              <a href="#remove">
+                <i class="fas fa-trash"></i>
+              </a>
+            </li>
+             <li>
+              4+5 = 2
+              <a href="#remove">
+                <i class="fas fa-trash"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-              <hr class="pb-calc-hr" />
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-percent"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-check"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-superscript"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-arrows"></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-7 calc-main">
+          <div class="container">
+            <div class="row">
+              <input class="col values" type="number" />
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col-3"></div>
+              <div class="col-3">
+                <a class="bt-calc ac" href="#">AC</a>
               </div>
-              <div class="row" style="background: #b3ffff;">
-                <div class="col-md-12">
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">CE</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">C</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-arrow-circle-o-left"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <strong>/</strong>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">7</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">8</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">9</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-times fa-lg"></span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">4</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">5</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">6</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-minus"></span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">1</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">2</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">3</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-plus"></span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row" style="padding-bottom: 5px;">
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <span class="fa fa-calculator"></span>
-                      </button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">0</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">,</button>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                      <button class="btn pb-calc-btn">
-                        <strong>=</strong>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-3">
+                <a class="bt-calc action" href="#">
+                  <i class="fas fa-divide"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <a class="bt-calc number" href="#">7</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">8</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">9</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc action" href="#">
+                  <i class="fas fa-times"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <a class="bt-calc number" href="#">4</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">5</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">6</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc action" href="#">
+                  <i class="fas fa-minus"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3">
+                <a class="bt-calc number" href="#">3</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">2</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">1</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc action" href="#">
+                  <i class="fas fa-plus"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <a class="bt-calc plus number" href="#">0</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc number" href="#">,</a>
+              </div>
+              <div class="col-3">
+                <a class="bt-calc action" href="#">
+                  <i class="fas fa-equals"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -136,23 +124,8 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+  name: "app"
 };
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
