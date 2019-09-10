@@ -37,13 +37,16 @@
         <div class="col-7 calc-main">
           <div class="container">
             <div class="row">
-              <input class="col values" type="number" />
+              <div class="displayValue col values">
+                  {{valorCorrente || '0'}}
+              </div>
+              
             </div>
             <div class="row">
               <div class="col-3"></div>
               <div class="col-3"></div>
               <div class="col-3">
-                <a class="bt-calc ac" href="#">AC</a>
+                <a v-on:click.prevent.self="limpar()" class="bt-calc ac" href="#">AC</a>
               </div>
               <div class="col-3">
                 <a class="bt-calc action" href="#">
@@ -125,7 +128,22 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+   data() {
+    return {
+      valorCorrente: '123',
+      numeroAnterior: null,
+      operador: null,
+      operadorClicado: false
+    };
+  },
+  methods: {
+    limpar() {
+      this.valorCorrente = '';
+    }
+  }
 };
 </script>
+
+
 
