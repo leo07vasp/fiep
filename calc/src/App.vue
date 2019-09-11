@@ -4,7 +4,7 @@
 
     <div class="container calc-online">
       <div class="row">
-        <div class="col-5 history">
+        <div class="col-md-5 col-12 history">
           <h6>Historico</h6>
           <ul class="history-box">
             <li v-bind:key="index" v-for="(item, index) in lastCounts">
@@ -16,7 +16,7 @@
           </ul>
         </div>
 
-        <div class="col-7 calc-main">
+        <div class="col-md-7 col-12 calc-main">
           <div class="container">
             <div class="row">
               <div
