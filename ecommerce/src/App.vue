@@ -14,8 +14,8 @@
             <div class="filtros-aplicados">
               <span v-for="(preco, index) in precos" :key="index" class="tag">
                 {{preco.min ? 'min:' : ''}} {{preco.min ? preco.min : ''}}
-                {{preco.min && preco.max ? '~' : ''}}
-                {{preco.max ? 'max:' : ''}} {{preco.max ? preco.max : ''}}
+                {{preco.min && (preco.max && preco.max !== 999) ? '~' : ''}}
+                {{preco.max && preco.max !== 999 ? 'max:' : ''}} {{preco.max && preco.max !== 999 ? preco.max : ''}}
                 <a
                   v-on:click="removePreco(preco)"
                   href="#"
@@ -38,16 +38,16 @@
 
             <ul>
               <li>
-                <a v-on:click="aplicarFiltroPreco({min: 0, max : 10})" href="#">Até $10</a>
+                <a v-on:click="aplicarFiltroPreco({min: 0, max : 5})" href="#">Até $5</a>
               </li>
               <li>
-                <a v-on:click="aplicarFiltroPreco({min : 10, max: 20})" href="#">$10 ~ $20</a>
+                <a v-on:click="aplicarFiltroPreco({min : 5, max: 10})" href="#">$5 ~ $10</a>
               </li>
               <li>
-                <a v-on:click="aplicarFiltroPreco({min: 20,max : 30})" href="#">$20 ~ $30</a>
+                <a v-on:click="aplicarFiltroPreco({min: 10,max : 15})" href="#">$10 ~ $15</a>
               </li>
               <li>
-                <a v-on:click="aplicarFiltroPreco({min: 30, max :99999})" href="#">Mais de $30</a>
+                <a v-on:click="aplicarFiltroPreco({min: 20, max : 999})" href="#">Mais de $20</a>
               </li>
             </ul>
 
