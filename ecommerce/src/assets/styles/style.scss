@@ -1,0 +1,39 @@
+.main-ecommerce {
+  margin-top: 90px;
+
+  #filtro-box {
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }
+
+  .filtros-aplicados {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tag {
+      border: 1px solid #666;
+      margin: 1%;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .product-item {
+    margin-bottom: 30px;
+    .item-box {
+      border: 1px solid lightgrey;
+      padding: 10px;
+
+      .desc {
+        min-height: 50px;
+        margin-top: 10px;
+      }
+
+      .price {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -38,8 +38,6 @@
       .history-box {
         list-style: none;
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
 
         li {
           text-align: left;
@@ -47,7 +45,6 @@
           color: rgb(70, 70, 70);
           padding: 3px 10px;
           letter-spacing: 2px;
-          flex: 1 1;
 
           &:hover {
             background: rgb(167, 167, 167);
