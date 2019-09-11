@@ -155,7 +155,7 @@ export default {
     }
   },
   methods: {
-    removePreco(preco) {
+    removePreco() {
       if (event) event.preventDefault();
       this.precos = [];
     },
