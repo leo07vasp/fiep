@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     myFunction() {
-      this.$emit("created");
+      this.$emit("hahaha");
     }
   }
 };

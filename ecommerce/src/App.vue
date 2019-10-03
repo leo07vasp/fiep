@@ -102,7 +102,7 @@
               >{{item.description.length > 60 ? item.description.substring(1, 57) + '...' : item.description}}</p>
 
               <Stars
-                @created="handleCreate(item.qtyrating)"
+                @hahaha="handleCreate(item.qtyrating)"
                 :qty="item.qtyrating"
                 :msg="item.rating"
               />
