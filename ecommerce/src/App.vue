@@ -101,7 +101,11 @@
                 class="desc"
               >{{item.description.length > 60 ? item.description.substring(1, 57) + '...' : item.description}}</p>
 
-              <Stars :qty="item.qtyrating" :msg="item.rating" />
+              <Stars
+                @created="handleCreate(item.qtyrating)"
+                :qty="item.qtyrating"
+                :msg="item.rating"
+              />
               <p>{{item.brand}}</p>
               <p class="price">
                 <b>${{item.price}}</b>
@@ -158,6 +162,10 @@ export default {
     removePreco() {
       if (event) event.preventDefault();
       this.precos = [];
+    },
+
+    handleCreate(qt) {
+      console.log("Parece que nós temos: " + qt + " avaliações");
     },
 
     aplicarFiltroPreco(faixa) {

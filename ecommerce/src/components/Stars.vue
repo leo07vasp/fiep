@@ -53,6 +53,8 @@
       <i class="fas fa-star"></i>
       {{qty}}
     </p>
+
+    <button v-on:click="myFunction()">teste</button>
   </div>
 </template>
 
@@ -62,6 +64,11 @@ export default {
   props: {
     msg: Number,
     qty: Number
+  },
+  methods: {
+    myFunction() {
+      this.$emit("created");
+    }
   }
 };
 </script>
